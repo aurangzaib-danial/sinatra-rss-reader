@@ -10,6 +10,7 @@ gem 'activerecord', '5.2.3', require: 'active_record'
 gem 'require_all'
 gem 'sinatra'
 gem 'sinatra-activerecord'
+gem 'rss'
 
 gem 'pry', group: [:development, :test]
 
