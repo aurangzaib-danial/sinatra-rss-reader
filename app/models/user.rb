@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
   has_secure_password
-  validates_presence_of :email
+  validates :email, uniqueness: true
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
+  validates :password, :presence => true,
+                       :length => {:within => 6..40},
+                       :on => :create
 end
