@@ -1,5 +1,9 @@
 class ApplicationController < Sinatra::Base
 
+  before do
+    @title = 'Catchup!'
+  end
+
   configure do 
     set :views, 'app/views'
   end
