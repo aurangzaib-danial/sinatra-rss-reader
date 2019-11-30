@@ -31,6 +31,6 @@ class RSSFeed < ActiveRecord::Base
 
   def self.parse_feed(url)
     rss_file = open(url)
-    RSS::Parser.parse(rss_file)
+    SimpleRSS.parse(rss_file)
   end
 end
