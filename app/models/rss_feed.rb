@@ -20,12 +20,13 @@ class RSSFeed < ActiveRecord::Base
   def self.new_from_url(url)
     parsed_feed = parse_feed(url)
 
-    feed = self.new
-    feed.title = parsed_feed.channel.title
-    feed.url = url
-    feed.parsed_feed = parsed_feed
+    self.new.tap do |feed|
+      feed.title = parsed_feed.channel.title
+      feed.url = url
+      feed.parsed_feed = parsed_feed
 
-    feed.make_articles_from_parsed_feed
+      feed.make_articles_from_parsed_feed
+    end
   end
 
   def self.parse_feed(url)
