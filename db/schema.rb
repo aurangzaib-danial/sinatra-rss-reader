@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_30_165112) do
+ActiveRecord::Schema.define(version: 2019_11_30_185546) do
 
   create_table "articles", force: :cascade do |t|
     t.integer "rss_feed_id"
@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(version: 2019_11_30_165112) do
   create_table "rss_feeds", force: :cascade do |t|
     t.string "title"
     t.string "url"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
   end
 
 end

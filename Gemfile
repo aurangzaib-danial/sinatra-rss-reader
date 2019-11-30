@@ -11,6 +11,7 @@ gem 'require_all'
 gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'simple-rss'
+gem 'bcrypt'
 
 gem 'pry', group: [:development, :test]
 

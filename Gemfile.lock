@@ -13,6 +13,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
+    bcrypt (3.1.13)
     bond (0.5.1)
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
@@ -80,6 +81,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (= 5.2.3)
+  bcrypt
   pry
   rake
   require_all
