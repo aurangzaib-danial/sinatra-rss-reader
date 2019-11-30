@@ -30,6 +30,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (13.0.1)
     require_all (3.0.0)
     ripl (0.7.1)
       bond (~> 0.5.1)
@@ -80,6 +81,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (= 5.2.3)
   pry
+  rake
   require_all
   rspec
   rss

@@ -18,6 +18,7 @@ group :development do
   gem 'shotgun'
   gem 'tux'
   gem 'sqlite3'
+  gem 'rake'
 end
 
 group :test do
