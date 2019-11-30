@@ -15,5 +15,6 @@ desc 'reset database'
 task :reset do
   system('rm -rf db/schema.rb')
   system('rm -rf db/development.sqlite')
+  system('rm -rf db/test.sqlite')
   system('rake db:migrate')
 end
