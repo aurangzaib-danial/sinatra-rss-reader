@@ -7,6 +7,7 @@ class RSSFeed < ActiveRecord::Base
 
   def make_articles_from_parsed_feed
     parsed_feed.items.each do |item|
+      
       article = articles.build
       
       article.title = item.title
@@ -20,7 +21,11 @@ class RSSFeed < ActiveRecord::Base
         article.img_url = item.media_thumbnail_url
       end
 
+      article.audio_url = item.enclosure_url
+      article.audio_type = item.enclosure_type
+
       article.save
+
     end
   end
 
