@@ -1,4 +1,42 @@
+body {
+  background-color: #fdf6e4;
+  font-family: sans-serif;
+  color: #657b83;
+}
 .container {
   width: 960px;
   margin: 0 auto;
 }
+
+#logo h1 {
+  text-align: center;
+  color: #b58900;
+}
+
+nav {
+  text-align: center;
+  margin-top: 40px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px 20px;
+  border-right: 1px solid #657b83;
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #859914;
+  font-size: 1.3em;
+}
+
