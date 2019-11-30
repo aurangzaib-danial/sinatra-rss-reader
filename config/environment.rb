@@ -1,10 +1,14 @@
+ENV['SINATRA_ENV'] ||= 'development'
+
+APP_ENV = ENV['SINATRA_ENV']
+
 require 'bundler'
 require 'open-uri' #=> For RSS
 
-Bundler.require(:default, :development)
+Bundler.require(:default, APP_ENV.to_sym)
 
-configure :development do
-  set :database, 'sqlite3:db/development.sqlite'
+configure APP_ENV.to_sym do
+  set :database, "sqlite3:db/#{APP_ENV}.sqlite"
 end
 
 # Extend Simple RSS to include enclosure tag attributes
