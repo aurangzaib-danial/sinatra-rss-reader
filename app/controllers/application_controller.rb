@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
   
   configure do
     enable :sessions
-    set :session_secret, ENV.fetch('SESSION_SECRET') { SecureRandom.hex(64) }
+    set :session_secret, 'read_this_from_env_variable'
     set :views, 'app/views'
   end
 

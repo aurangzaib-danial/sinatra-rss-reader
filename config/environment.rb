@@ -2,7 +2,6 @@ ENV['APP_ENV'] ||= 'development'
 
 require 'bundler'
 require 'open-uri' #=> For RSS
-require 'securerandom'
 
 Bundler.require(:default, ENV['APP_ENV'])
 
