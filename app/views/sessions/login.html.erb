@@ -2,10 +2,12 @@
   <h1>Log in</h1>
   <form action="/login" method="post">
     
-    <div class="error">
-      <p>Invalid email or password.</p>
-    </div>
-
+    <% if flash.has?(:error) %>
+       <div class="error">
+         <p><%= flash[:error] %></p>
+       </div>
+    <% end %>
+    
     <label for="email">Email Address</label>
     <input type="email" id="email" name="email" required>
   

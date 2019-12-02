@@ -1,5 +1,6 @@
 class ApplicationController < Sinatra::Base
-
+  use Rack::Flash
+  
   before do
     @title = 'Catchup!'
   end  

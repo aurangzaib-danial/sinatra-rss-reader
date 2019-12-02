@@ -35,6 +35,7 @@ class SessionsController < ApplicationController
 
       redirect '/'
     else
+      flash[:error] = 'Invalid email or password.' 
       redirect '/login'
     end
   end
