@@ -99,3 +99,11 @@ nav ul li a {
   font-size: 1.2em;
 }
 
+.error ul {
+  padding-left: 20px;
+}
+
+.error ul li {
+  margin-bottom: 10px;
+}
+
