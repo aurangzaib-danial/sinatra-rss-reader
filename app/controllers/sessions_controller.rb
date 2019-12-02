@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   get '/signup' do
     redirect '/' if logged_in?
 
-    @title = 'Signup'
+    @title = 'Sign up'
 
     erb :'sessions/signup.html'
   end
@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
   get '/login' do
     redirect '/' if logged_in?
 
-    @title = 'Login'
+    @title = 'Log in'
 
     erb :'sessions/login.html'
   end
