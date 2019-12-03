@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_041532) do
+ActiveRecord::Schema.define(version: 2019_12_03_092230) do
 
   create_table "articles", force: :cascade do |t|
     t.integer "feed_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_12_03_041532) do
     t.string "title"
     t.string "link"
     t.integer "user_id"
+    t.string "image_link"
   end
 
   create_table "users", force: :cascade do |t|

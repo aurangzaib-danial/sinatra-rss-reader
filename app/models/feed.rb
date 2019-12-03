@@ -32,11 +32,12 @@ class Feed < ActiveRecord::Base
       parsed_feed = parse_feed(link)
       
       feed = Feed.new
-      feed.title = parsed_feed.channel.title
       feed.link = link
-      feed.parsed_feed = parsed_feed
       feed.user_id = user_id
-  
+      feed.title = parsed_feed.title
+      feed.image_link = parsed_feed.url
+      feed.parsed_feed = parsed_feed
+      
       feed.make_articles_from_parsed_feed
   
       feed
