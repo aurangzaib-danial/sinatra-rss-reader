@@ -1,6 +1,7 @@
 class Feed < ActiveRecord::Base
   belongs_to :user
   has_many :articles
+  validates :title, uniqueness: { scope: :user_id }
   
   attr_accessor :parsed_feed
 

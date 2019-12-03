@@ -1,4 +1,4 @@
-<section id="new_feed">
+<section id="new_feed" class="col-2">
   <form action="/feeds" method="post">
     <% if flash.has?(:error) %>
        <div class="error">
@@ -6,7 +6,7 @@
        </div>
     <% end %>
     <label for="feed_link">RSS Link</label>
-    <input type="text" name="feed_link" id="feed_link" required>
-    <button>Create Feed</button>
+    <input type="text" name="feed_link" id="feed_link" placeholder="Enter Here" required>
+    <button type="submit">Create Feed</button>
   </form>
 </section>

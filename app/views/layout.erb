@@ -36,6 +36,11 @@
     <%= yield %>
 
     <footer>
+    <% if logged_in? %>
+      <strong><a href="/feeds/new">New Feed</a></strong>
+      <br><br>
+    <% end %>
+
     <a href="https://github.com/aurangzaib-danial/sinatra-rss-reader" id="github-link">
       Github Repo
     </a>

@@ -3,7 +3,7 @@
   <h2>Articles</h2>
   <ul>
     <% @articles.each do |article| %>
-      <li><%= article.title %></li>
+      <li><a href="/feeds/<%= @feed.id %>/articles/<%= article.id %>"><%= article.title %></a></li>
     <% end %>
   </ul>
 </section>
