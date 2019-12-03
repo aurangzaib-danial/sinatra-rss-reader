@@ -3,4 +3,6 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
   validates :password, length: {:within => 6..40}, on: :create
+
+  has_many :feeds
 end

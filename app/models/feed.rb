@@ -1,5 +1,5 @@
-class RSSFeed < ActiveRecord::Base
-  # belongs_to :user
+class Feed < ActiveRecord::Base
+  belongs_to :user
   has_many :articles
   
   validates_presence_of :title, :url
