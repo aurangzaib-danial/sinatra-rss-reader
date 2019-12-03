@@ -1,0 +1,10 @@
+<section id="feeds">
+  <h1>Your Feeds</h1>
+  <% current_user.feeds.each do |feed| %>
+    <ul>
+      <li>
+        <a href="/feeds/<%= feed.id%>/articles"><%= feed.title %></a>
+      </li>
+    </ul>
+  <% end %>
+</section>
