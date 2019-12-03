@@ -20,9 +20,18 @@ a {
   margin: 0 auto;
 }
 
-#logo h1 {
+#logo {
   text-align: center;
+  margin-top: 1.5em;
+}
+
+#logo h1 {
+  margin-top: 0;
   color: #b58900;
+}
+
+div#logo button#new_feed_button {
+  display: inline;
 }
 
 nav {
@@ -140,6 +149,10 @@ footer {
   margin-right: 20px;
 }
 
+#new_feed {
+  margin-top: 2em;
+}
+
 #new_feed label, input, button{
   display: block;
   margin-bottom: 10px;
@@ -224,15 +237,16 @@ footer {
   margin-bottom: 0;
 }
 
-#articles h1 {
+#articles h2.feed_title, #article_show h2.feed_title{
   color: #628ed2;
+  margin-bottom: 20px;
 }
 
 #articles div form {
   display: inline-block;
 }
 
-#articles div form button {
+#articles div form button, #article_external_link, #new_feed_button {
   padding-top: 9px;
   padding-bottom: 7px;
   border-radius: 4px;
@@ -243,6 +257,7 @@ footer {
   cursor: pointer;
   font-weight: bold;
   font-size: 1.2em;
+  display: block;
 }
 
 #unfollow {
@@ -254,10 +269,35 @@ footer {
   background-color: #ff1e28;
 }
 
-#update {
+#update, #article_external_link, #new_feed_button {
   background-color: #75B74F;
 }
 
-#update:hover {
+#update:hover, #article_external_link:hover, #new_feed_button:hover {
   background-color: #66a54a;
+}
+
+#article_external_link {
+  margin-top: 20px;
+}
+
+#article_show {
+  margin-top: 2em;
+}
+
+#article_show h3 {
+  color: #859914;
+  margin-top: 1.5em;
+}
+
+#article_show img, #article_show audio {
+  display: block;
+  width: 50%;
+}
+
+p#description {
+  width: 50%;
+  margin-top: 20px;
+  font-size: 1.2em;
+  text-align: justify;
 }

@@ -27,8 +27,12 @@
           </ul>
       </nav>
       
-      <div id="logo">
-        <h1>Catchup!</h1>
+      <div id="logo"> 
+        <% if logged_in? %>
+          <a href="/feeds/new"><button type="button" id="new_feed_button">New Feed</button></a>
+        <% else %>
+          <h1>Catchup!</h1>
+        <% end %>
       </div><!-- logo -->
       
     </header>
@@ -36,10 +40,6 @@
     <%= yield %>
 
     <footer>
-    <% if logged_in? %>
-      <strong><a href="/feeds/new">New Feed</a></strong>
-      <br><br>
-    <% end %>
 
     <a href="https://github.com/aurangzaib-danial/sinatra-rss-reader" id="github-link">
       Github Repo

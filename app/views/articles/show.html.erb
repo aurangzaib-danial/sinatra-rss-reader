@@ -1,0 +1,28 @@
+<section id="article_show">
+  <h2 class="feed_title"><%= @feed.title %></h2>
+  
+  <h3> <%= @article.title %> </h3>
+  
+  <% if @article.image_link? %>
+    <img src="<%= @article.image_link %>">
+  <% end %>
+  
+  <% if @article.audio_link? %>
+    <audio controls>
+      <source src="<%= @article.audio_link%>" type="<%= @article.audio_type %>">
+    </audio>
+  <% end %>
+  
+  <% if @article.description? %>
+    <p id="description">
+      <%= @article.description %>
+    </p>
+  <% end %>
+  
+  <% if @article.published_date? %>
+    <h4>Published: <%= @article.published_date %></h4>
+  <% end %>
+  
+  <a href="<%= @article.link %>" target="_blank"><button type="button" id="article_external_link">Visit Website</button></a>
+  
+</section>
