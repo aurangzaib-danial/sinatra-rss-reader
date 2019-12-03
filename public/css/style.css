@@ -174,4 +174,18 @@ footer {
   cursor: pointer;
 }
 
+#feeds ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#feeds ul li a img {
+  width: 80px;
+  height: 40px;
+  position: relative;
+  top: 10px;
+}
+
 

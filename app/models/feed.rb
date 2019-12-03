@@ -30,17 +30,21 @@ class Feed < ActiveRecord::Base
   def self.new_from_rss_link(link:, user_id:)
     begin
       parsed_feed = parse_feed(link)
-      
-      feed = Feed.new
-      feed.link = link
-      feed.user_id = user_id
-      feed.title = parsed_feed.title
+    
+    feed = Feed.new
+    feed.link = link
+    feed.user_id = user_id
+    feed.title = parsed_feed.title
+    begin
       feed.image_link = parsed_feed.url
-      feed.parsed_feed = parsed_feed
-      
-      feed.make_articles_from_parsed_feed
-  
-      feed
+    rescue NoMethodError
+      feed.image_link = nil
+    end
+    feed.parsed_feed = parsed_feed
+    
+    feed.make_articles_from_parsed_feed
+
+    feed
     rescue
       return false
     end
