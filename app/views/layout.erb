@@ -18,6 +18,7 @@
           <ul>
             <li><a href="/">Home</a></li>
             <% if logged_in? %>
+              <li><a href="/feeds">Feeds</a></li>
               <li><a href="/logout">Logout</a></li>
             <% else %>
               <li><a href="/login">Login</a></li>
