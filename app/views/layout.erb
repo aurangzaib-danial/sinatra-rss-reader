@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%= @title %></title>
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 </head>
 <body>
@@ -34,7 +35,13 @@
     <%= yield %>
 
     <footer>
+    <a href="https://github.com/aurangzaib-danial/sinatra-rss-reader" id="github-link">
+      Github Repo
+    </a>
     
+    <span>
+      MADE WITH <span id="heart-symbol">&#10084;</span> BY <strong><a href="https://github.com/aurangzaib-danial">Aurangzaib Danial</a></strong>
+    </span>
     </footer>
   </div><!-- .container -->
 

@@ -10,6 +10,11 @@ body {
   background-color: #fdf6e4;
 }
 
+a {
+  text-decoration: none;
+  color: #859914;
+}
+
 .container {
   width: 960px;
   margin: 0 auto;
@@ -42,8 +47,6 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: #859914;
   font-size: 1.3em;
 }
 
@@ -92,6 +95,7 @@ nav ul li a {
 
 .sessions button:hover {
   background-color: #00a7c8;
+  cursor: pointer;
 }
 
 .error p, .error li{
@@ -107,3 +111,22 @@ nav ul li a {
   margin-bottom: 10px;
 }
 
+
+#index p{
+  text-align: justify;
+  font-size: 1.17em;
+}
+
+
+#heart-symbol {
+  color: #ff0000;
+}
+
+footer {
+  text-align: center;
+  margin-top: 70px;
+}
+
+#github-link {
+  margin-right: 20px;
+}
