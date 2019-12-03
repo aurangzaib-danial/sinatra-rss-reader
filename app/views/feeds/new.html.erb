@@ -1,7 +1,12 @@
 <section id="new_feed">
   <form action="/feeds" method="post">
+    <% if flash.has?(:error) %>
+       <div class="error">
+         <p><%= flash[:error] %></p>
+       </div>
+    <% end %>
     <label for="feed_link">RSS Link</label>
-    <input type="text" name="feed_link" id="feed_link">
-    <button>ADD Feed</button>
+    <input type="text" name="feed_link" id="feed_link" required>
+    <button>Create Feed</button>
   </form>
 </section>

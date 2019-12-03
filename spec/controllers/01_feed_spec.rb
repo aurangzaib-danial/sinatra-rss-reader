@@ -10,4 +10,9 @@ describe 'Feeds' do
     expect(last_response.location).to include('/')
   end
 
+  it 'cannot post to /feeds if not logged in' do
+    post '/feeds'
+    expect(last_response.location).to include('/')
+  end
+
 end

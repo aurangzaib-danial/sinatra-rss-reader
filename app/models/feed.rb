@@ -27,18 +27,26 @@ class Feed < ActiveRecord::Base
   end
 
   def self.new_from_rss_link(link:, user_id:)
-    parsed_feed = parse_feed(link)
+    begin
+      parsed_feed = parse_feed(link)
+      
+      feed = Feed.new
+      feed.title = parsed_feed.channel.title
+      feed.link = link
+      feed.parsed_feed = parsed_feed
+      feed.user_id = user_id
+  
+      feed.make_articles_from_parsed_feed
+  
+      feed
+    rescue
+      return false
+    end
+  end
 
-    feed = Feed.new
-    feed.title = parsed_feed.channel.title
-    feed.link = link
-    feed.parsed_feed = parsed_feed
-    feed.user_id = user_id
-
-    feed.make_articles_from_parsed_feed
-
-    feed.save
-
+  def self.create_from_rss_link(link:, user_id:)
+    feed = new_from_rss_link(link: link, user_id: user_id)
+    feed.save if feed
     feed
   end
 
