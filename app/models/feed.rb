@@ -10,28 +10,28 @@ class Feed < ActiveRecord::Base
       article = articles.build
       
       article.title = item.title
-      article.url = item.link
+      article.link = item.link
       article.description = item.description
       article.published_date = item.pubDate
       
       if item.media_content_type && item.media_content_type.include?('image')
-        article.img_url = item.media_content_url
+        article.image_link = item.media_content_url
       else
-        article.img_url = item.media_thumbnail_url
+        article.image_link = item.media_thumbnail_url
       end
 
-      article.audio_url = item.enclosure_url
+      article.audio_link = item.enclosure_url
       article.audio_type = item.enclosure_type
 
     end
   end
 
-  def self.new_from_rss_url(url:, user_id:)
-    parsed_feed = parse_feed(url)
+  def self.new_from_rss_link(link:, user_id:)
+    parsed_feed = parse_feed(link)
 
     feed = Feed.new
     feed.title = parsed_feed.channel.title
-    feed.url = url
+    feed.link = link
     feed.parsed_feed = parsed_feed
     feed.user_id = user_id
 
@@ -42,8 +42,8 @@ class Feed < ActiveRecord::Base
     feed
   end
 
-  def self.parse_feed(url)
-    rss = open(url)
+  def self.parse_feed(link)
+    rss = open(link)
     SimpleRSS.parse(rss)
   end
 end

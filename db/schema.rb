@@ -10,22 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_013302) do
+ActiveRecord::Schema.define(version: 2019_12_03_041532) do
 
   create_table "articles", force: :cascade do |t|
     t.integer "feed_id"
     t.string "title"
-    t.string "url"
+    t.string "link"
     t.text "description"
     t.datetime "published_date"
-    t.string "img_url"
-    t.string "audio_url"
+    t.string "image_link"
+    t.string "audio_link"
     t.string "audio_type"
   end
 
   create_table "feeds", force: :cascade do |t|
     t.string "title"
-    t.string "url"
+    t.string "link"
     t.integer "user_id"
   end
 
