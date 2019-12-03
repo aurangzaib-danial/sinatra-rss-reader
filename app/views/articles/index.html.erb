@@ -1,9 +1,27 @@
 <section id="articles">
   <h1><%= @feed.title %></h1>
+  <div>
+    <form action="/feeds" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <button type="submit" id="unfollow">Unfollow</button>
+    </form>
+    
+    <form action="/feeds/<%= @feed.id %>/articles/update" method="get">
+      <button type="submit" id="update">Update Articles</button>
+    </form>
+  </div>
   <h2>Articles</h2>
   <ul>
     <% @articles.each do |article| %>
-      <li><a href="/feeds/<%= @feed.id %>/articles/<%= article.id %>"><%= article.title %></a></li>
+      <li>
+        <a href="/feeds/<%= @feed.id %>/articles/<%= article.id %>">
+        <% if article.image_link? %>
+          <img src="<%= article.image_link %>" />&nbsp;&nbsp;
+        <% else %>
+          <img src="/images/no_photo_icon.png" />&nbsp;&nbsp;
+        <% end %><%= article.title %></a>
+      </li>
     <% end %>
   </ul>
+
 </section>

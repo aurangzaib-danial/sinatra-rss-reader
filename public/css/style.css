@@ -111,10 +111,17 @@ nav ul li a {
   margin-bottom: 10px;
 }
 
+#index {
+  margin-top: 2em;
+}
 
 #index p{
   text-align: justify;
   font-size: 1.17em;
+}
+
+#index h3 span {
+  color: #628ed2;
 }
 
 
@@ -178,7 +185,10 @@ footer {
   list-style: none;
   padding: 0;
   font-size: 1.2em;
-  margin-bottom: 20px;
+}
+
+#feeds ul li {
+  margin-bottom: 1.2em;
 }
 
 #feeds ul li a img {
@@ -188,4 +198,66 @@ footer {
   top: 10px;
 }
 
+#articles {
+  margin-top: 2em;
+}
 
+#articles ul {
+  padding: 0;
+  list-style: none;
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+#articles ul li {
+  margin-bottom: 1.2em;
+}
+
+#articles ul li a img {
+  width: 130px;
+  height: 78px;
+  position: relative;
+  top: 30px;
+}
+
+#articles h2 {
+  margin-bottom: 0;
+}
+
+#articles h1 {
+  color: #628ed2;
+}
+
+#articles div form {
+  display: inline-block;
+}
+
+#articles div form button {
+  padding-top: 9px;
+  padding-bottom: 7px;
+  border-radius: 4px;
+  padding: 12px 22px 10px;
+  color: white;
+  border: 0;
+  transition: all 0.12s;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#unfollow {
+  margin-right: 20px;
+  background-color: #FF5B5B;
+}
+
+#unfollow:hover {
+  background-color: #ff1e28;
+}
+
+#update {
+  background-color: #75B74F;
+}
+
+#update:hover {
+  background-color: #66a54a;
+}

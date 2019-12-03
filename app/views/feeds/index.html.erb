@@ -1,15 +1,15 @@
 <section id="feeds">
   <h1>Feeds</h1>
+  <ul>
   <% current_user.feeds.each do |feed| %>
-    <ul>
-      <li>
-        <a href="/feeds/<%= feed.id%>/articles">
-        <% if feed.image_link? %>
-          <img src="<%= feed.image_link %>" />&nbsp;&nbsp;
-        <% else %>
-          <img src="/images/no_icon.svg" />&nbsp;&nbsp;
-        <% end %><%= feed.title %></a>
-      </li>
-    </ul>
+    <li>
+      <a href="/feeds/<%= feed.id%>/articles">
+      <% if feed.image_link? %>
+        <img src="<%= feed.image_link %>" />&nbsp;&nbsp;
+      <% else %>
+        <img src="/images/no_photo_icon.png" />&nbsp;&nbsp;
+      <% end %><%= feed.title %></a>
+    </li>
   <% end %>
+  </ul>
 </section>

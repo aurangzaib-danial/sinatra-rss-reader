@@ -31,7 +31,8 @@ class FeedsController < ApplicationController
   get '/feeds/:feed_id/articles' do
     @feed = Feed.find_by_id(params[:feed_id])
     if @feed && @feed.user_id == session[:user_id]
-      @articles = @feed.articles.select("id, title") # TODO only select required attributes
+      
+      @articles = @feed.articles.select("id, title, image_link")
 
       erb :'articles/index.html'
     else

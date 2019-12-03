@@ -1,6 +1,6 @@
 <section id="index" class="col-2">
   <% if logged_in? %>
-    <h3>Logged in with <%= current_user.email %></h3>
+    <h3>Logged in with <span><%= current_user.email %></span></h3>
   <% end %>
 
   <h3>About</h3>
