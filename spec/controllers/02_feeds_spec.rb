@@ -1,18 +1,29 @@
 describe 'Feeds' do
 
   it 'cannot access /feeds if not logged in' do
+
     get '/feeds'
-    expect(last_response.location).to include('/')
+    follow_redirect!
+    
+    expect(last_response.body).to include('About')
   end
 
   it 'cannot access /feeds/new if not logged in' do
+
     get '/feeds/new'
-    expect(last_response.location).to include('/')
+    follow_redirect!
+
+    expect(last_response.body).to include('About')
   end
 
   it 'cannot post to /feeds if not logged in' do
+
     post '/feeds'
-    expect(last_response.location).to include('/')
+    follow_redirect!
+    
+    expect(last_response.body).to include('About')
   end
+
+  
 
 end
