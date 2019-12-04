@@ -81,6 +81,7 @@ class FeedsController < ApplicationController
 
     if feed && feed.user_id == session[:user_id]
       feed.destroy
+      feed.articles.destroy_all
       redirect '/feeds'
     else
       redirect '/'
