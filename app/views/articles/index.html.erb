@@ -10,6 +10,12 @@
       <button type="submit" id="update">Update Articles</button>
     </form>
   </div>
+  
+  <% if flash.has?(:new_articles_count) %>
+    <h1>Found new articles: <%= flash[:new_articles_count] %></h1>
+  <% end %>
+  
+  <h1></h1>
   <h2>Articles</h2>
   <ul>
     <% @articles.each do |article| %>

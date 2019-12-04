@@ -101,7 +101,7 @@ describe 'Feeds' do
 
     post '/login', params
 
-    feed = Feed.create(user: user)
+    feed = Feed.create(title: 'Delete me', user: user)
 
     delete "/feeds/#{feed.id}"
 

@@ -43,6 +43,20 @@ class FeedsController < ApplicationController
 
   end
 
+  get '/feeds/:feed_id/articles/update' do
+    feed = Feed.find_by_id(params[:feed_id])
+    
+    if feed && feed.user_id == session[:user_id]
+      new_articles_count = feed.update_articles_and_return_count
+
+      flash[:new_articles_count] = new_articles_count
+
+      redirect "/feeds/#{feed.id}/articles"
+    else
+      redirect '/feeds'
+    end
+  end
+
   get '/feeds/:feed_id/articles/:article_id' do
     @feed = Feed.find_by_id(params[:feed_id])
     
