@@ -63,4 +63,50 @@ describe 'Feeds' do
     expect(last_response.body).to include('Feeds')
   end
 
+
+  it 'cannot delete if not logged in' do
+    
+    delete '/feeds/1' 
+    follow_redirect!
+
+    expect(last_response.body).to include('About')
+
+  end
+
+  it 'cannot delete feed if it does not belong to the current user' do
+
+    params = {
+      email: 'aurangzaib.danial@gmail.com', 
+      password: 'khan1234'
+    }
+    user_1 = User.create(params)
+    user_2 = User.create(email: 'sunny@example.com', password: 'mypass12345')
+
+    post '/login', params
+
+    feed = Feed.create(title: 'Test Feed', user: user_2)
+    
+    delete '/feeds/1'
+    follow_redirect!
+
+    expect(last_response.body).to include('About')
+  end
+
+  it 'can delete feed if it belongs to the current user' do
+    params = {
+      email: 'aurangzaib.danial@gmail.com', 
+      password: 'khan1234'
+    }
+    user = User.create(params)
+
+    post '/login', params
+
+    feed = Feed.create(user: user)
+
+    delete "/feeds/#{feed.id}"
+
+    expect(Feed.exists?(feed.id)).to be_falsey
+
+  end
+
 end

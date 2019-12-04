@@ -1,7 +1,7 @@
 <section id="articles">
   <h2 class="feed_title"><%= @feed.title %></h2>
   <div>
-    <form action="/feeds" method="post">
+    <form action="/feeds/<%= @feed.id %>" method="post">
       <input type="hidden" name="_method" value="delete">
       <button type="submit" id="unfollow">Unfollow</button>
     </form>

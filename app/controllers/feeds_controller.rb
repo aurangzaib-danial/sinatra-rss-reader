@@ -62,4 +62,15 @@ class FeedsController < ApplicationController
 
   end
 
+  delete '/feeds/:id' do
+    feed = Feed.find_by_id(params[:id])
+
+    if feed && feed.user_id == session[:user_id]
+      feed.destroy
+      redirect '/feeds'
+    else
+      redirect '/'
+    end
+  end
+
 end
