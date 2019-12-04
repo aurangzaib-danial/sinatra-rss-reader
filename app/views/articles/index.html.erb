@@ -1,5 +1,5 @@
 <section id="articles">
-  <h2 class="feed_title"><%= @feed.title %></h2>
+  <h2 class="feed_title"><%= @feed.title %> (<%= @feed.articles.count %>)</h2>
   <div>
     <form action="/feeds/<%= @feed.id %>" method="post">
       <input type="hidden" name="_method" value="delete">

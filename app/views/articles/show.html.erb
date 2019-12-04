@@ -23,6 +23,8 @@
     <h4>Published: <%= @article.published_date %></h4>
   <% end %>
   
-  <a href="<%= @article.link %>" target="_blank"><button type="button" id="article_external_link">Visit Website</button></a>
+  <% if @article.link? %>
+    <a href="<%= @article.link %>" target="_blank"><button type="button" id="article_external_link">Visit Website</button></a>
+  <% end %>
   
 </section>

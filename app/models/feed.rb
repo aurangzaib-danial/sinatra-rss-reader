@@ -12,6 +12,14 @@ class Feed < ActiveRecord::Base
   end
 
   def make_article_from_parsed_feed_item(item)
+    item.title.force_encoding('UTF-8') if item.title
+    item.link.force_encoding('UTF-8') if item.link
+    item.description.force_encoding('UTF-8') if item.description
+    item.media_content_type.force_encoding('UTF-8') if item.media_content_type
+    item.media_thumbnail_url.force_encoding('UTF-8') if item.media_thumbnail_url
+    item.enclosure_url.force_encoding('UTF-8') if item.enclosure_url
+    item.enclosure_type.force_encoding('UTF-8') if item.enclosure_type
+
     article = articles.build
       
     article.title = item.title
@@ -56,20 +64,20 @@ class Feed < ActiveRecord::Base
     begin
       parsed_feed = parse_feed(link)
     
-    feed = Feed.new
-    feed.link = link
-    feed.user_id = user_id
-    feed.title = parsed_feed.title
-    begin
-      feed.image_link = parsed_feed.url
-    rescue NoMethodError
-      feed.image_link = nil
-    end
-    feed.parsed_feed = parsed_feed
-    
-    feed.make_articles_from_parsed_feed
+      feed = Feed.new
+      feed.link = link
+      feed.user_id = user_id
+      feed.title = parsed_feed.title.force_encoding('UTF-8')
+      begin
+        feed.image_link = parsed_feed.url.force_encoding('UTF-8')
+      rescue NoMethodError
+        feed.image_link = nil
+      end
+      feed.parsed_feed = parsed_feed
+      
+      feed.make_articles_from_parsed_feed
 
-    feed
+      feed
     rescue
       return false
     end
