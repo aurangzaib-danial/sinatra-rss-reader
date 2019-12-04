@@ -33,7 +33,7 @@ class FeedsController < ApplicationController
     
     if @feed && @feed.user_id == session[:user_id]
       
-      @articles = @feed.articles.select("id, title, image_link")
+      @articles = @feed.articles.select("id, title, image_link").order('published_date desc')
 
       erb :'articles/index.html'
       

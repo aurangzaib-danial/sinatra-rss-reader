@@ -25,7 +25,7 @@ class Feed < ActiveRecord::Base
     article.title = item.title
     article.link = item.link
     article.description = item.description
-    article.published_date = item.pubDate
+    article.published_date = item.pubDate || item.published
     
     if item.media_content_type && item.media_content_type.include?('image')
       article.image_link = item.media_content_url
