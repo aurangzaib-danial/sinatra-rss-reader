@@ -7,8 +7,10 @@ describe 'Login' do
     User.create(params)
     
     post '/login', params
+    
+    follow_redirect!
 
-    expect(last_response.location).to include('/')
+    expect(last_response.body).to include('About')
   end
 
   it 'cannot visit /login if already logged in' do
@@ -21,8 +23,10 @@ describe 'Login' do
     post '/login', params
 
     get '/login'
+    
+    follow_redirect!
 
-    expect(last_response.location).to include('/')
+    expect(last_response.body).to include('About')
   end
 end
 
@@ -34,10 +38,11 @@ describe 'Signup' do
     }
 
     post '/signup', params
+    follow_redirect!
 
     expect(User.last.email).to eq('aurangzaib.danial@gmail.com')
 
-    expect(last_response.location).to include('/')
+    expect(last_response.body).to include('About')
   end
 
   it 'cannot visit /signup after signup' do
@@ -49,7 +54,8 @@ describe 'Signup' do
     post '/signup', params
     
     get '/signup'
-    expect(last_response.location).to include('/')
+    follow_redirect!
+    expect(last_response.body).to include('About')
   end
 
 end
