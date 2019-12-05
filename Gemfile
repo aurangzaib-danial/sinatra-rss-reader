@@ -8,6 +8,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem 'activerecord', '5.2.3', require: 'active_record'
 gem 'require_all'
+gem 'rack'
 gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'simple-rss'

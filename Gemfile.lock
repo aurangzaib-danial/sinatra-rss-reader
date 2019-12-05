@@ -87,6 +87,7 @@ DEPENDENCIES
   bcrypt
   database_cleaner
   pry
+  rack
   rack-flash3
   rack-test
   rake
