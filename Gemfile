@@ -15,13 +15,22 @@ gem 'simple-rss'
 gem 'bcrypt'
 gem 'rack-flash3'
 
-gem 'pry', group: [:development, :test]
-gem 'sqlite3', group: [:development, :test]
+group :development, :production do
+  gem 'rake'
+end
+
+group :production do
+
+end
+
+group :development, :test do
+  gem 'pry'
+  gem 'sqlite3'
+end
 
 group :development do
   gem 'shotgun'
   gem 'tux'
-  gem 'rake'
 end
 
 group :test do
