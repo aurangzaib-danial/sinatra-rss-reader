@@ -2,9 +2,10 @@ ENV['APP_ENV'] ||= 'development'
 
 require 'bundler'
 require 'open-uri' #=> For RSS
-require 'rack-flash'
 
 Bundler.require(:default, ENV['APP_ENV'])
+
+require 'rack-flash'
 
 configure :development do
   set :database, 'sqlite3:db/development.sqlite'
