@@ -99,6 +99,11 @@ nav ul li a {
   border: 0;
   background-color: #628ed2;
   color: white;
+  
+  -webkit-transition: 0.12s all;
+  -moz-transition: 0.12s all;
+  -ms-transition: 0.12s all;
+  -o-transition: 0.12s all;
   transition: 0.12s all;
 }
 
@@ -194,6 +199,10 @@ footer {
   border: 0;
   background-color: #628ed2;
   color: white;
+  -webkit-transition: 0.12s all;
+  -moz-transition: 0.12s all;
+  -ms-transition: 0.12s all;
+  -o-transition: 0.12s all;
   transition: 0.12s all;
 }
 
@@ -282,11 +291,15 @@ footer {
   padding: 12px 22px 10px;
   color: white;
   border: 0;
-  transition: all 0.12s;
   cursor: pointer;
   font-weight: bold;
   font-size: 1.2em;
   display: block;
+  -webkit-transition: 0.12s all;
+  -moz-transition: 0.12s all;
+  -ms-transition: 0.12s all;
+  -o-transition: 0.12s all;
+  transition: 0.12s all;
 }
 
 #articles_found {
