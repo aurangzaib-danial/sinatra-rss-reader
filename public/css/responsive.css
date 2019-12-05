@@ -48,4 +48,8 @@
   #new_feed button {
     width: 100%;
   }
+
+  p#description {
+    text-align: initial;
+  }
 }

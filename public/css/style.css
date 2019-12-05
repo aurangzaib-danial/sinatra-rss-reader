@@ -317,6 +317,7 @@ footer {
 
 #article_show {
   margin-top: 2em;
+  padding: 0 15px;
 }
 
 #article_show h3 {
@@ -326,11 +327,11 @@ footer {
 
 #article_show img, #article_show audio {
   display: block;
-  width: 50%;
+  width: 100%;
+  max-width: 100%;
 }
 
 p#description {
-  width: 50%;
   margin-top: 20px;
   font-size: 1.2em;
   text-align: justify;
