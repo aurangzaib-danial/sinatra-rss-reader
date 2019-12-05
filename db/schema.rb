@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_092230) do
+ActiveRecord::Schema.define(version: 2019_12_04_233835) do
 
   create_table "articles", force: :cascade do |t|
     t.integer "feed_id"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_12_03_092230) do
     t.string "image_link"
     t.string "audio_link"
     t.string "audio_type"
+    t.boolean "read", default: false
   end
 
   create_table "feeds", force: :cascade do |t|

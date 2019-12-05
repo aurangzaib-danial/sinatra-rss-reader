@@ -33,7 +33,7 @@ class FeedsController < ApplicationController
     
     if @feed && @feed.user_id == session[:user_id]
       
-      @articles = @feed.articles.select("id, title, image_link").order('published_date desc')
+      @articles = @feed.articles.select("id, title, image_link, read").order('published_date desc')
 
       erb :'articles/index.html'
       
@@ -65,6 +65,11 @@ class FeedsController < ApplicationController
       @article = @feed.articles.find_by_id(params[:article_id])
 
       if @article
+        
+        unless @article.read
+          @article.update(read: true)
+        end
+
         erb :'articles/show.html'
       else
         redirect "/feeds/#{params[:feed_id]}/articles"

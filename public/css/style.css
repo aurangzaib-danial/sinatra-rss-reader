@@ -230,7 +230,13 @@ footer {
   width: 130px;
   height: 78px;
   position: relative;
-  top: 30px;
+  top: 20px;
+  display: inline-block;
+}
+
+#articles ul li a span {
+  display: inline-block;
+  color: #859914;
 }
 
 #articles h2 {
@@ -240,6 +246,10 @@ footer {
 #articles h2.feed_title, #article_show h2.feed_title{
   color: #628ed2;
   margin-bottom: 20px;
+}
+
+#article_show h2.feed_title a {
+  color: #628ed2;
 }
 
 #articles div form {
