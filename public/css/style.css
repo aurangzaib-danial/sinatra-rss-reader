@@ -121,12 +121,14 @@ nav ul li a {
 }
 
 #index {
+  margin: 0 auto;
   margin-top: 2em;
 }
 
 #index p{
   text-align: justify;
   font-size: 1.17em;
+  line-height: 1.5em;
 }
 
 #index h3 span {
