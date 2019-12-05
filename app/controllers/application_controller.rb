@@ -4,11 +4,14 @@ class ApplicationController < Sinatra::Base
   before do
     @title = 'Catchup!'
   end  
+
+  enable :sessions
+
+  set :views, 'app/views'
+  set :public, 'app/public'
   
-  configure do
-    enable :sessions
-    set :session_secret, 'read_this_from_env_variable'
-    set :views, 'app/views'
+  configure :development do
+    set :session_secret, 'only_for_development'
   end
 
   get '/' do
