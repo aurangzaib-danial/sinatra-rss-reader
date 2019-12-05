@@ -20,6 +20,19 @@
   .sessions {
     width: 100%;
   }
+
+  button#update, button#unfollow {
+    width: 100%;
+    margin: 0;
+  }
+
+  button#update {
+    margin-top: 10px;
+  }
+
+  #articles div form {
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 500px) {

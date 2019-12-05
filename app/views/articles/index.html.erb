@@ -12,7 +12,7 @@
   </div>
   
   <% if flash.has?(:new_articles_count) %>
-    <h1>Found new articles: <%= flash[:new_articles_count] %></h1>
+    <h2 id="articles_found">New Articles: <%= flash[:new_articles_count] %></h2>
   <% end %>
   
   <h2>Articles</h2>
@@ -24,7 +24,7 @@
           <img src="<%= article.image_link %>" />&nbsp;&nbsp;
         <% else %>
           <img src="/images/no_photo_icon.png" />&nbsp;&nbsp;
-        <% end %><span><%= article.title %><br>
+        <% end %><span><br><%= article.title %><br>
         <small>Read: <%= article.read? ? '&#10004;' : '&#10005;' %></small>
         </span></a>
       </li>
