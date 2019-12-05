@@ -151,8 +151,13 @@ footer {
   margin-right: 20px;
 }
 
+#github-link, footer span {
+  display: inline-block;
+}
+
 #new_feed {
   margin-top: 2em;
+  padding: 0 15px;
 }
 
 #new_feed label, input, button{
@@ -178,7 +183,8 @@ footer {
 
 #new_feed button {
   display: block;
-  width: 35%;
+  width: 250px;
+  margin: 0 auto;
   border-radius: 4px;
   padding-top: 16px;
   padding-bottom: 16px;

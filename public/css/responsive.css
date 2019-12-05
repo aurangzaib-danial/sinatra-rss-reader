@@ -21,3 +21,18 @@
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  #github-link {
+    margin-right: 0;
+  }
+
+  #github-link, footer > span {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  #new_feed button {
+    width: 100%;
+  }
+}
