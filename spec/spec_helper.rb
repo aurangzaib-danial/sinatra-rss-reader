@@ -1,11 +1,11 @@
-ENV['APP_ENV'] = 'test'
+ENV['RACK_ENV'] = 'test'
 
 require './config/environment'
 require 'rack/test'
 
 
 if ActiveRecord::Base.connection.migration_context.needs_migration?
-  raise 'Migrations are pending. Run `rake db:migrate APP_ENV=test` to resolve the issue.'
+  raise 'Migrations are pending. Run `rake db:migrate RACK_ENV=test` to resolve the issue.'
 end
 
 RSpec.configure do |config|

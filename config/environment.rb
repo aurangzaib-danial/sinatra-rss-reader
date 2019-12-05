@@ -1,9 +1,9 @@
-ENV['APP_ENV'] ||= 'development'
+ENV['RACK_ENV'] ||= 'development'
 
 require 'bundler'
 require 'open-uri' #=> For RSS
 
-Bundler.require(:default, ENV['APP_ENV'])
+Bundler.require(:default, ENV['RACK_ENV'])
 
 require 'rack-flash'
 
