@@ -14,6 +14,10 @@ class ApplicationController < Sinatra::Base
     set :session_secret, 'only_for_development'
   end
 
+  configure :production do
+    set :session_secret, ENV.fetch('SESSION_SECRET') { SecureRandom.hex(64) }
+  end
+
   get '/' do
     erb :'index.html'
   end
