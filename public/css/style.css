@@ -202,11 +202,16 @@ footer {
   cursor: pointer;
 }
 
+#feeds {
+  padding: 0 15px;
+}
+
 #feeds ul {
   list-style: none;
   padding: 0;
   font-size: 1.2em;
 }
+
 
 #feeds ul li {
   margin-bottom: 1.2em;
@@ -217,6 +222,12 @@ footer {
   height: 40px;
   position: relative;
   top: 10px;
+  display: inline-block;
+}
+
+#feeds ul li a span {
+  display: inline-block;
+  color: #859914;
 }
 
 #articles {
