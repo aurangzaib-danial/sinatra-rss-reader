@@ -15,6 +15,9 @@ configure :test do
   set :database, 'sqlite3:db/test.sqlite'
 end
 
+configure :production do
+  set :database, ENV['DATABASE_URL'] 
+end
 
 # Extend Simple RSS to include enclosure tag attributes
 SimpleRSS.item_tags << :"enclosure#url"
