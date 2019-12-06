@@ -33,8 +33,16 @@ class Feed < ActiveRecord::Base
       article.image_link = item.media_thumbnail_url
     end
 
-    article.audio_link = item.enclosure_url
-    article.audio_type = item.enclosure_type
+    if item.enclosure_type
+
+      if item.enclosure_type.include?('audio')
+        article.audio_link = item.enclosure_url
+        article.audio_type = item.enclosure_type
+      elsif item.enclosure_type.include?('image')
+        article.image_link = item.enclosure_url
+      end
+
+    end
 
     article
   end
