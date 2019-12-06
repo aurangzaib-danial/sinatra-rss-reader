@@ -2,7 +2,7 @@
   <h1>Log in</h1>
   <form action="/login" method="post">
     
-    <% if flash.has?(:error) %>
+    <% if flash[:error] %>
        <div class="error">
          <p><%= flash[:error] %></p>
        </div>

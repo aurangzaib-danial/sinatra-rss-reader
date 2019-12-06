@@ -14,7 +14,7 @@ gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'simple-rss'
 gem 'bcrypt'
-gem 'rack-flash3'
+gem 'sinatra-flash'
 
 group :development, :production do
   gem 'rake'

@@ -1,6 +1,6 @@
 <section id="new_feed" class="col-1">
   <form action="/feeds" method="post">
-    <% if flash.has?(:error) %>
+    <% if flash[:error] %>
        <div class="error">
          <p><%= flash[:error] %></p>
        </div>

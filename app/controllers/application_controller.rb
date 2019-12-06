@@ -1,11 +1,12 @@
 class ApplicationController < Sinatra::Base
-  use Rack::Flash
   
   before do
     @title = 'Catchup!'
   end  
 
   enable :sessions
+
+  register Sinatra::Flash
 
   set :views, 'app/views'
   set :public_folder, 'app/public'

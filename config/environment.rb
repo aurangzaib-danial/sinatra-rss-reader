@@ -6,7 +6,7 @@ require 'securerandom'
 
 Bundler.require(:default, ENV['RACK_ENV'])
 
-require 'rack-flash'
+require 'sinatra/flash'
 
 configure :development do
   set :database, 'sqlite3:db/development.sqlite'
