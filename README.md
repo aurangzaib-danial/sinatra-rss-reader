@@ -20,6 +20,10 @@ Try this app in your local environment, clone and run following command inside t
 
     $ bundle && bundle exec rake db:migrate
 
+Start up local server
+
+    $ bundle exec shotgun 
+
 For interactive console
 
     $ bundle exec rake console
