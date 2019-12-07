@@ -8,16 +8,16 @@ RSS means Really Simple Syndication which allows users and applications to acces
 
 [Watch this video to understand how this app works!](https://youtu.be/GZ-u9Bk6_mE)
 
-# USAGE
+## USAGE
 
 This app is hosted on Heroku https://catchup-rss.herokuapp.com using heroku free plan.
 
 **App might take time to load sometimes. The reason is that heroku puts apps which are on free plan to sleep after 30 minutes of inactivity. So when you visit the website, the app is waked from sleep which takes a little time!**
 
-# CONTRIBUTING
+## CONTRIBUTING
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/aurangzaib-danial/sinatra-rss-reader. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-# License
+## License
 
 Everyone interacting in the SinatraRSSReader project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/aurangzaib_danial/todo_lists/blob/master/CODE_OF_CONDUCT.md).
