@@ -14,7 +14,7 @@ class FeedsController < ApplicationController
   end
 
   post '/feeds' do
-    feed = Feed.new_from_rss_link(link: params[:feed_link], user_id: session[:user_id])
+    feed = Feed.new_from_rss(link: params[:feed_link], user_id: session[:user_id])
     if feed
       if feed.save
         redirect "/feeds/#{feed.id}/articles"
@@ -47,9 +47,9 @@ class FeedsController < ApplicationController
     feed = Feed.find_by_id(params[:feed_id])
     
     if feed && feed.user_id == session[:user_id]
-      new_articles_count = feed.update_articles_and_return_count
+      feed.update_articles
 
-      flash[:new_articles_count] = new_articles_count
+      flash[:updated_articles_count] = feed.updated_articles_count
 
       redirect "/feeds/#{feed.id}/articles"
     else

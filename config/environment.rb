@@ -23,7 +23,7 @@ end
 # Extend Simple RSS to include enclosure tag attributes
 SimpleRSS.item_tags << :"enclosure#url"
 SimpleRSS.item_tags << :"enclosure#type"
-SimpleRSS.feed_tags << :url # Lives in image tag of channel, points to image url
+SimpleRSS.feed_tags << :url # Lives inside image tag of channel, points to image url
 
 
 require_all 'app'
