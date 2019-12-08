@@ -31,7 +31,7 @@ This app is hosted on Heroku https://catchup-rss.herokuapp.com using heroku free
 
 Try this app in your local environment, clone and run following command inside this project's directory
 
-    $ bundle && bundle exec rake db:migrate
+    $ bundle && bundle exec rake db:schema:load
 
 Start up local server
 
