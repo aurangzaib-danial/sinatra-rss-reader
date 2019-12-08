@@ -1,5 +1,7 @@
 # RSS Reader Made in Sinatra
 
+## Description
+
 This is a RSS Reader application or RSS feeds aggregator 
 
 What is RSS?
@@ -9,6 +11,15 @@ RSS means Really Simple Syndication which allows users and applications to acces
 [Watch this video to understand how this app works!](https://youtu.be/GZ-u9Bk6_mE)
 
 [Blog Post about this app](https://medium.com/@aurangzaib.danial/sinatra-portfolio-project-5ff8915d8c5b)
+
+## Built With
+
+* [Ruby](https://www.ruby-lang.org/en/)
+* [Sinatra](http://sinatrarb.com/) and [ActiveRecord](https://apidock.com/rails/ActiveRecord/Base) - The Ruby frameworks used
+* [SimpleRSS](https://rubygems.org/gems/simple-rss) - Ruby library for parsing raw RSS
+* [PostgreSQL](https://www.postgresql.org/) - The relational database used for production
+* [SQLITE3](https://www.sqlite.org/) - The relational database used for development
+* HTML5 & CSS
 
 ## Usage
 
