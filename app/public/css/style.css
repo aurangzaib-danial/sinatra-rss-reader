@@ -147,17 +147,13 @@ nav ul li a {
 
 footer {
   text-align: center;
-  margin-top: 70px;
+  margin-top: 50px;
   margin-bottom: 20px;
   font-size: 1.1em;
 }
 
-#github-link {
-  margin-right: 20px;
-}
-
-#github-link, footer span {
-  display: inline-block;
+footer .social-link {
+  margin-right: 30px;
 }
 
 #new_feed {
