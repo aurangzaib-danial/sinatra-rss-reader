@@ -14,7 +14,7 @@ RSS means Really Simple Syndication which allows users and applications to acces
 
 ## Built With
 
-* [Ruby](https://www.ruby-lang.org/en/)
+* [Ruby 2.6.3](https://www.ruby-lang.org/en/news/2019/04/17/ruby-2-6-3-released/)
 * [Sinatra](http://sinatrarb.com/) and [ActiveRecord](https://apidock.com/rails/ActiveRecord/Base) - The Ruby frameworks used
 * [SimpleRSS](https://rubygems.org/gems/simple-rss) - Ruby library for parsing raw RSS
 * [PostgreSQL](https://www.postgresql.org/) - The relational database used for production
