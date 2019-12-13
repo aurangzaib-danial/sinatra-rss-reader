@@ -10,7 +10,7 @@ RSS means Really Simple Syndication which allows users and applications to acces
 
 [Watch this video to understand how this app works!](https://youtu.be/GZ-u9Bk6_mE)
 
-[Blog Post about this app](https://medium.com/@aurangzaib.danial/sinatra-portfolio-project-5ff8915d8c5b)
+[Blog Post about this app](https://aurangzaib-danial.github.io/sinatra_portfolio_project)
 
 ## Built With
 
